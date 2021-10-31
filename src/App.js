@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import Navigation from "./components/Navigation";
 
 // Route
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navigation />
       <Switch>
-        <Router path='/' />
+        <Route path="/" />
       </Switch>
     </Router>
   );
