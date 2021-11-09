@@ -18,7 +18,7 @@ function Navigation() {
               <NavLinks
                 className="nav-link"
                 activeClass="active"
-                to="section1"
+                to="hero"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -28,7 +28,7 @@ function Navigation() {
               <NavLinks
                 className="nav-link"
                 activeClass="active"
-                to="section2"
+                to="about"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -38,7 +38,7 @@ function Navigation() {
               <NavLinks
                 className="nav-link"
                 activeClass="active"
-                to="section3"
+                to="services"
                 spy={true}
                 smooth={true}
                 duration={500}

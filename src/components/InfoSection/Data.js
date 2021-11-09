@@ -1,4 +1,4 @@
-export const homeObjOne = {
+export const heroObject = {
   id: "hero",
   lightBg: false,
   lightText: true,
@@ -12,11 +12,12 @@ export const homeObjOne = {
   img: require("../../images/svg-7.svg").default,
   alt: "Home",
   dark: true,
-  primary: false,
+  primary: true,
   darkText: false,
+  goToId: "about",
 };
 
-export const homeObjTwo = {
+export const aboutObject = {
   id: "about",
   lightBg: true,
   lightText: false,
