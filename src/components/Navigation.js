@@ -1,32 +1,12 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import { FaBars, FaTimes } from "react-icons/fa";
-// import { Button } from "./Button";
-// import "./Navbar.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
-
-// RiContactsLine, MdOutlineFeaturedPlayList
+import { Link } from "react-scroll";
+import styled from "styled-components";
 
 function Navigation() {
-  // const [click, setClick] = useState(false);
-  // const [button, setButton] = useState(true);
-
-  // const handleClick = () => setClick(!click);
-  // const closeMobileMenu = () => setClick(false);
-  // const showButton = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setButton(false);
-  //   } else {
-  //     setButton(true);
-  //   }
-  // };
-
-  // closeMobileMenu();
-  // showButton();
-
   return (
     <>
-      <Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark">
+      <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">INFINITY HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -35,10 +15,38 @@ function Navigation() {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/">About</Nav.Link>
-              <Nav.Link href="/">Features</Nav.Link>
-              <Nav.Link href="/">Contact</Nav.Link>
+              <NavLinks
+                className="nav-link"
+                activeClass="active"
+                to="section1"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Home
+              </NavLinks>
+              <NavLinks
+                className="nav-link"
+                activeClass="active"
+                to="section2"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                About
+              </NavLinks>
+              <NavLinks
+                className="nav-link"
+                activeClass="active"
+                to="section3"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                Services
+              </NavLinks>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link href="/">Download Now</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -48,3 +56,13 @@ function Navigation() {
 }
 
 export default Navigation;
+
+const NavLinks = styled(Link)`
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.active {
+    bordor-bottom: 3px solid #536dfe;
+  }
+`;

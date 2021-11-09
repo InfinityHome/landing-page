@@ -1,17 +1,23 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Navigation from "./components/Navigation";
-
-// Route
+import { homeObjOne, homeObjTwo } from "./components/InfoSection/Data";
+import InfoSection from "./components/InfoSection/InfoSection";
+import Services from "./components/Services";
 
 function App() {
   return (
-    <Router>
+    <div className="App">
       <Navigation />
-      <Switch>
-        <Route path="/" />
-      </Switch>
-    </Router>
+      <div id="section1">
+        <InfoSection {...homeObjOne} />
+      </div>
+      <div id="section2">
+        <InfoSection {...homeObjTwo} />
+      </div>
+      <div id="section3">
+        <Services />
+      </div>
+    </div>
   );
 }
 

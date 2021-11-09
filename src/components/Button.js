@@ -1,37 +1,24 @@
-import React from "react";
-import "./Button.css";
+import styled from "styled-components";
+import { Link } from "react-scroll";
 
-const STYLES = ["btn--primary", "btn--outline"];
+export const Button = styled(Link)`
+  border-radius: 4px;
+  background: ${({ primary }) => (primary ? "#536DFE" : "#010606")};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? "14px 48px" : "12px 30px")};
+  color: ${({ dark }) => (dark ? "#010606" : "#fff")};
+  font-size: ${({ fontBig }) => (fontBig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transitionL all 0.1s ease-in-out;
+  text-decoration: none;
 
-const SIZES = ["btn--medium", "btn--large", "btn--mobile", "btn--wide"];
-
-const COLORS = ["primary", "blue", "red", "green"];
-
-export const Button = ({
-  children,
-  type,
-  onclick,
-  buttonStyle,
-  buttonSize,
-  buttonColor,
-}) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
-
-  const checkButtonSize = STYLES.includes(buttonSize) ? buttonSize : SIZES[0];
-
-  const checkButtonColor = STYLES.includes(buttonColor)
-    ? buttonColor
-    : COLORS[0];
-
-  return (
-    <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`}
-      onclick={onclick}
-      type={type}
-    >
-      {children}
-    </button>
-  );
-};
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? "#fff" : "#536DFE")};
+  }
+`;
