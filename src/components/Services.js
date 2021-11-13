@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Icon1 from "../images/svg-7.svg";
-import Icon2 from "../images/svg-8.svg";
-import Icon3 from "../images/svg-7.svg";
+import Icon1 from "../images/svg-1.svg";
+import Icon2 from "../images/svg-2.svg";
+import Icon3 from "../images/svg-3.svg";
 
 const Services = () => {
   return (
@@ -12,17 +12,19 @@ const Services = () => {
         <ServicesCard>
           <ServicesIcon src={Icon1} />
           <ServicesH2>Best price in market</ServicesH2>
-          <ServicesP>We help you find home services easier.</ServicesP>
+          <ServicesP>
+            We help you find home services easier with bidding options.
+          </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon2} />
-          <ServicesH2>Best price in market</ServicesH2>
-          <ServicesP>We help you find home services easier.</ServicesP>
+          <ServicesH2>Chat with expert</ServicesH2>
+          <ServicesP>Get in touch with a service provider today.</ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon3} />
-          <ServicesH2>Best price in market</ServicesH2>
-          <ServicesP>We help you find home services easier.</ServicesP>
+          <ServicesH2>Progress Status</ServicesH2>
+          <ServicesP>View the progress of each servises.</ServicesP>
         </ServicesCard>
       </ServicesWrapper>
     </ServicesContainer>
@@ -102,6 +104,7 @@ const ServicesH1 = styled.h1`
 
 const ServicesH2 = styled.h2`
   font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 10px;
 `;
 
